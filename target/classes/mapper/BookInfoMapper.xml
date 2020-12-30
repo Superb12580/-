@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.superb.mapper.BookInfoMapper">
+
+<!--    <resultMap id="book" type="com.superb.entity.BookInfo">-->
+<!--        <id column="book_id" property="bookId"/>-->
+<!--        <result column="book_name" property="bookName"/>-->
+<!--    </resultMap>-->
+
+
+    <select id="infoList" resultType="java.util.Map">
+        select a.*,b.type_name from book_info a left join book_type b on a.book_type = b.id where a.deleted = 0
+    </select>
+</mapper>

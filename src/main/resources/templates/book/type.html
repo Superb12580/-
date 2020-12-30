@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>首页 - 图书管理系统</title>
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <meta name="keywords" content="图书管理系统">
+    <meta name="description" content="图书管理系统">
+    <meta name="author" content="Superb">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="lyear-layout-web">
+    <div class="lyear-layout-container">
+        <!--左侧导航-->
+        <aside class="lyear-layout-sidebar">
+
+            <!-- logo -->
+            <div id="logo" class="sidebar-header">
+                <a th:href="@{/home}"><img src="images/logo-sidebar.png" title="LightYear" alt="LightYear"/></a>
+            </div>
+            <div class="lyear-layout-sidebar-scroll">
+
+                <nav class="sidebar-main">
+                    <ul class="nav nav-drawer">
+                        <li class="nav-item active"><a th:href="@{/home}"><i class="mdi mdi-home"></i> 首页</a></li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="mdi mdi-palette"></i> 图书管理</a>
+                            <ul class="nav nav-subnav">
+                                <li><a th:href="@{/info}">图书列表</a></li>
+                                <li><a th:href="@{/borrow}">借阅记录</a></li>
+                                <li><a th:href="@{/type}">图书类型</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="mdi mdi-palette"></i> UI 元素</a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="lyear_ui_buttons.html">按钮</a></li>
+                                <li><a href="lyear_ui_cards.html">卡片</a></li>
+                                <li><a href="lyear_ui_grid.html">格栅</a></li>
+                                <li><a href="lyear_ui_icons.html">图标</a></li>
+                                <li><a href="lyear_ui_tables.html">表格</a></li>
+                                <li><a href="lyear_ui_modals.html">模态框</a></li>
+                                <li><a href="lyear_ui_tooltips_popover.html">提示 / 弹出框</a></li>
+                                <li><a href="lyear_ui_alerts.html">警告框</a></li>
+                                <li><a href="lyear_ui_pagination.html">分页</a></li>
+                                <li><a href="lyear_ui_progress.html">进度条</a></li>
+                                <li><a href="lyear_ui_tabs.html">标签页</a></li>
+                                <li><a href="lyear_ui_typography.html">排版</a></li>
+                                <li><a href="lyear_ui_step.html">步骤</a></li>
+                                <li><a href="lyear_ui_other.html">其他</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="mdi mdi-format-align-justify"></i> 表单</a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="lyear_forms_elements.html">基本元素</a></li>
+                                <li><a href="lyear_forms_radio.html">单选框</a></li>
+                                <li><a href="lyear_forms_checkbox.html">复选框</a></li>
+                                <li><a href="lyear_forms_switch.html">开关</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="mdi mdi-file-outline"></i> 示例页面</a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="lyear_pages_doc.html">文档列表</a></li>
+                                <li><a href="lyear_pages_gallery.html">图库列表</a></li>
+                                <li><a href="lyear_pages_config.html">网站配置</a></li>
+                                <li><a href="lyear_pages_rabc.html">设置权限</a></li>
+                                <li><a href="lyear_pages_add_doc.html">新增文档</a></li>
+                                <li><a href="lyear_pages_guide.html">表单向导</a></li>
+                                <li><a href="lyear_pages_login.html">登录页面</a></li>
+                                <li><a href="lyear_pages_error.html">错误页面</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="mdi mdi-language-javascript"></i> JS 插件</a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="lyear_js_datepicker.html">日期选取器</a></li>
+                                <li><a href="lyear_js_sliders.html">滑块</a></li>
+                                <li><a href="lyear_js_colorpicker.html">选色器</a></li>
+                                <li><a href="lyear_js_chartjs.html">Chart.js</a></li>
+                                <li><a href="lyear_js_jconfirm.html">对话框</a></li>
+                                <li><a href="lyear_js_tags_input.html">标签插件</a></li>
+                                <li><a href="lyear_js_notify.html">通知消息</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 多级菜单</a>
+                            <ul class="nav nav-subnav">
+                                <li><a href="#!">一级菜单</a></li>
+                                <li class="nav-item nav-item-has-subnav">
+                                    <a href="#!">一级菜单</a>
+                                    <ul class="nav nav-subnav">
+                                        <li><a href="#!">二级菜单</a></li>
+                                        <li class="nav-item nav-item-has-subnav">
+                                            <a href="#!">二级菜单</a>
+                                            <ul class="nav nav-subnav">
+                                                <li><a href="#!">三级菜单</a></li>
+                                                <li><a href="#!">三级菜单</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">一级菜单</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <p class="copyright">Copyright &copy; 2019. All rights reserved. More Templates 更多</p>
+                </div>
+            </div>
+
+        </aside>
+        <!--End 左侧导航-->
+
+        <!--头部信息-->
+        <header class="lyear-layout-header">
+
+            <nav class="navbar navbar-default">
+                <div class="topbar">
+
+                    <div class="topbar-left">
+                        <div class="lyear-aside-toggler">
+                            <span class="lyear-toggler-bar"></span>
+                            <span class="lyear-toggler-bar"></span>
+                            <span class="lyear-toggler-bar"></span>
+                        </div>
+                        <span class="navbar-page-title"> 图书类型 </span>
+                    </div>
+
+                    <ul class="topbar-right">
+                        <li class="dropdown dropdown-profile">
+                            <a href="javascript:void(0)" data-toggle="dropdown">
+                                <img class="img-avatar img-avatar-48 m-r-10" src="images/users/avatar.jpg" alt=""/>
+                                <span th:text="${session.username}"> <span class="caret"></span></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="lyear_pages_profile.html"><i class="mdi mdi-account"></i> 个人信息</a></li>
+                                <li><a href="lyear_pages_edit_pwd.html"><i class="mdi mdi-lock-outline"></i> 修改密码</a>
+                                </li>
+                                <li><a href="javascript:void(0)"><i class="mdi mdi-delete"></i> 清空缓存</a></li>
+                                <li class="divider"></li>
+                                <li><a th:href="@{/layout}"><i class="mdi mdi-logout-variant"></i> 退出登录</a></li>
+                            </ul>
+                        </li>
+                        <!--切换主题配色-->
+                        <li class="dropdown dropdown-skin">
+                            <span data-toggle="dropdown" class="icon-palette"><i class="mdi mdi-palette"></i></span>
+                            <ul class="dropdown-menu dropdown-menu-right" data-stopPropagation="true">
+                                <li class="drop-title"><p>主题</p></li>
+                                <li class="drop-skin-li clearfix">
+                  <span class="inverse">
+                    <input type="radio" name="site_theme" value="default" id="site_theme_1" checked>
+                    <label for="site_theme_1"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="site_theme" value="dark" id="site_theme_2">
+                    <label for="site_theme_2"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="site_theme" value="translucent" id="site_theme_3">
+                    <label for="site_theme_3"></label>
+                  </span>
+                                </li>
+                                <li class="drop-title"><p>LOGO</p></li>
+                                <li class="drop-skin-li clearfix">
+                  <span class="inverse">
+                    <input type="radio" name="logo_bg" value="default" id="logo_bg_1" checked>
+                    <label for="logo_bg_1"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="logo_bg" value="color_2" id="logo_bg_2">
+                    <label for="logo_bg_2"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="logo_bg" value="color_3" id="logo_bg_3">
+                    <label for="logo_bg_3"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="logo_bg" value="color_4" id="logo_bg_4">
+                    <label for="logo_bg_4"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="logo_bg" value="color_5" id="logo_bg_5">
+                    <label for="logo_bg_5"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="logo_bg" value="color_6" id="logo_bg_6">
+                    <label for="logo_bg_6"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="logo_bg" value="color_7" id="logo_bg_7">
+                    <label for="logo_bg_7"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="logo_bg" value="color_8" id="logo_bg_8">
+                    <label for="logo_bg_8"></label>
+                  </span>
+                                </li>
+                                <li class="drop-title"><p>头部</p></li>
+                                <li class="drop-skin-li clearfix">
+                  <span class="inverse">
+                    <input type="radio" name="header_bg" value="default" id="header_bg_1" checked>
+                    <label for="header_bg_1"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="header_bg" value="color_2" id="header_bg_2">
+                    <label for="header_bg_2"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="header_bg" value="color_3" id="header_bg_3">
+                    <label for="header_bg_3"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="header_bg" value="color_4" id="header_bg_4">
+                    <label for="header_bg_4"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="header_bg" value="color_5" id="header_bg_5">
+                    <label for="header_bg_5"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="header_bg" value="color_6" id="header_bg_6">
+                    <label for="header_bg_6"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="header_bg" value="color_7" id="header_bg_7">
+                    <label for="header_bg_7"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="header_bg" value="color_8" id="header_bg_8">
+                    <label for="header_bg_8"></label>
+                  </span>
+                                </li>
+                                <li class="drop-title"><p>侧边栏</p></li>
+                                <li class="drop-skin-li clearfix">
+                  <span class="inverse">
+                    <input type="radio" name="sidebar_bg" value="default" id="sidebar_bg_1" checked>
+                    <label for="sidebar_bg_1"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="sidebar_bg" value="color_2" id="sidebar_bg_2">
+                    <label for="sidebar_bg_2"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="sidebar_bg" value="color_3" id="sidebar_bg_3">
+                    <label for="sidebar_bg_3"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="sidebar_bg" value="color_4" id="sidebar_bg_4">
+                    <label for="sidebar_bg_4"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="sidebar_bg" value="color_5" id="sidebar_bg_5">
+                    <label for="sidebar_bg_5"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="sidebar_bg" value="color_6" id="sidebar_bg_6">
+                    <label for="sidebar_bg_6"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="sidebar_bg" value="color_7" id="sidebar_bg_7">
+                    <label for="sidebar_bg_7"></label>
+                  </span>
+                                    <span>
+                    <input type="radio" name="sidebar_bg" value="color_8" id="sidebar_bg_8">
+                    <label for="sidebar_bg_8"></label>
+                  </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--切换主题配色-->
+                    </ul>
+
+                </div>
+            </nav>
+
+        </header>
+        <!--End 头部信息-->
+
+        <!--页面主要内容-->
+        <main class="lyear-layout-content">
+
+
+            <div class="modal fade" id="empModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" id="form">
+
+
+                                <div class="form-group">
+                                    <label for="typeName" class="col-sm-2 control-label">图书类型</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="typeName" class="form-control" id="typeName"
+                                               placeholder="图书类型">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" name="id" id="id">
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" id="save_btn" class="btn btn-primary">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <!--            添加删除-->
+                    <div class="col-md-4 col-md-offset-8">
+                        <button id="insert_btn" class="btn btn-success"><span
+                                class="glyphicon glyphicon-plus-sign"> 新增</span>
+                        </button>
+                        <button id="deleteAll_btn" class="btn btn-danger"><span
+                                class="glyphicon glyphicon-trash"> 批量删除</span>
+                        </button>
+                    </div>
+                </div>
+                <!--        表格-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="check"/>
+                                </th>
+                                <th>图书类别</th>
+                                <th>操作人</th>
+                                <th>操作时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="type:${types}">
+                                <td>
+                                    <input type="checkbox" class="check-item"/>
+                                </td>
+                                <td hidden th:text="${type.id}"></td>
+                                <td th:text="${type.typeName}"></td>
+                                <td th:text="${type.czr}"></td>
+                                <td th:text="${type.czsj}"></td>
+                                <td>
+                                    <button th:id="update_btn" th:emp_id="${type.id}" class="btn btn-primary btn-sm">
+                                        编辑
+                                    </button>
+                                    <button th:id="delete_btn" th:emp_id="${type.id}" class="btn btn-danger btn-sm">删除
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--        尾部-->
+                <div class="row"></div>
+            </div>
+
+
+        </main>
+        <!--End 页面主要内容-->
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="js/main.min.js"></script>
+
+
+<!--图表插件-->
+<!--<script type="text/javascript" src="js/Chart.js"></script>-->
+
+<script type="text/javascript">
+
+    //数据校验
+    function validate_add_form() {
+        var typeName = $("#typeName").val();
+        if (typeName == null || typeName == "") {
+            show_validate_msg("#typeName", "error", "不能为空");
+            return false;
+        } else {
+            show_validate_msg("#typeName", "success", "输入合法");
+        }
+        return true;
+    }
+
+
+    //显示校验的验证信息
+    function show_validate_msg(ele, status, msg) {
+        //清除原先格式
+        $(ele).parent().removeClass("has-success has-error");
+        $(ele).next("span").text("");
+        if ("success" == status) {
+            $(ele).parent().addClass("has-success");
+            $(ele).next("span").text(msg);
+        } else if ("error" == status) {
+            $(ele).parent().addClass("has-error");
+            $(ele).next("span").text(msg);
+        }
+    }
+
+
+    //单个删除
+    $(document).on("click", "#delete_btn", function () {
+        //弹出删除确认框
+        var empName = $(this).parents("tr").find("td:eq(2)").text();
+        if (confirm("确认删除【" + empName + "】吗？")) {
+            var emp_ids = $(this).attr("emp_id");
+            $.ajax({
+                url: "/book/type/delete",
+                type: "DELETE",
+                data: "id=" + emp_ids,
+                success: function (result) {
+                    alert(result.msg);
+                }
+            });
+            location.reload();
+        }
+    });
+
+
+    //新增
+    $("#insert_btn").click(function () {
+        //清空表单样式
+        reset_form("#form");
+
+        $("#myModalLabel").text("新增");
+        //弹出模态框
+        $("#empModal").modal({
+            backdrop: "static"
+        });
+    });
+    //修改
+    $(document).on("click", "#update_btn", function () {
+
+        //查询emp_id
+        var emp_id = $(this).attr("emp_id");
+        //清空表单样式
+        reset_form("#form");
+        //
+        $("#myModalLabel").text("编辑");
+        //填充emp
+        getEmp(emp_id);
+        //弹出模态框
+        $("#empModal").modal({
+            backdrop: "static"
+        });
+    });
+
+    function getEmp(id) {
+        $.ajax({
+            url: "/book/type/get",
+            type: "GET",
+            data: "id=" + id,
+            success: function (result) {
+                var data = result.data;
+                $("#typeName").val(data.typeName);
+                $("#id").val(data.id);
+            }
+        });
+
+    }
+
+    //清空表单样式
+    function reset_form(ele) {
+        //清空内容
+        $(ele)[0].reset();
+        //清空表单样式
+        $(ele).find("*").removeClass("has-success has-error");
+        $(ele).find(".help-block").text("");
+    }
+
+    //保存
+    $("#save_btn").click(function () {
+        if (!validate_add_form()) {
+            return false;
+        }
+        $.ajax({
+            url: "/book/type/save",
+            type: "POST",
+            data: $("#form").serialize(),
+            success: function (result) {
+                alert(result.msg);
+                //关闭
+                $("#empModal").modal('hide');
+            }
+        });
+        location.reload();
+    });
+
+
+    //批量删除
+    $("#deleteAll_btn").click(function () {
+        var emp_ids = "";
+        var emp_names = "";
+        $.each($(".check-item:checked"), function () {
+            emp_ids += $(this).parents("tr").find("td:eq(1)").text() + "-";
+            emp_names += $(this).parents("tr").find("td:eq(2)").text() + ",";
+        })
+        if (emp_ids == "" || emp_names == "") {
+            alert("未选择");
+            return false;
+        }
+        emp_ids = emp_ids.substring(0, emp_ids.length - 1);
+        emp_names = emp_names.substring(0, emp_names.length - 1);
+        if (!confirm("确认删除【" + emp_names + "】吗？")) {
+            return;
+        }
+        $.ajax({
+            url: "/book/type/deletes",
+            type: "DELETE",
+            data: "ids=" + emp_ids,
+            success: function (result) {
+                alert(result.msg);
+            }
+        });
+        location.reload();
+    });
+
+    //全选全不选
+    $("#check").click(function () {
+        //自定义属性是attr 原生用prop
+        $(".check-item").prop("checked", $(this).prop("checked"));
+    });
+
+    $(".check-item").click(function () {
+        var flag = $(".check-item:checked").length == $(".check-item").length;
+        $("#check").prop("checked", flag);
+    });
+    $(document).on("click", ".check-item", function () {
+        var flag = $(".check-item:checked").length == $(".check-item").length;
+        $("#check").prop("checked", flag);
+    });
+</script>
+</body>
+</html>
