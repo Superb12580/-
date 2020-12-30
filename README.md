@@ -11,6 +11,8 @@ Spring Boot + MyBatis + thymeleaf + MySQL + jQuery + ajax等实现轻便的图�
 ![登录界面](https://images.gitee.com/uploads/images/2020/1230/170225_5dba04e7_8068525.png "登录界面.png")
 ![借阅](https://images.gitee.com/uploads/images/2020/1230/170251_2e46bf0e_8068525.png "借阅.png")
 ![还书](https://images.gitee.com/uploads/images/2020/1230/170329_a26ace7f_8068525.png "还书.png")
+
+注：暂未实现搜索框和分页功能，后续更新
 #### 软件架构
 
 开发环境：IDEA + JDK1.8 + Navicat + Maven
