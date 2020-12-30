@@ -26,7 +26,9 @@ Spring Boot + MyBatis + thymeleaf + MySQL + jQuery + ajax等实现轻便的图�
 
 #### 使用说明
 
-1.  登录用户名admin，密码1
+1.  端口号：8087
+2.  访问路径：localhost:8087/book
+2.  登录用户名admin，密码1
 
 #### 结构说明
 
