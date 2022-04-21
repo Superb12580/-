@@ -501,9 +501,9 @@
             type: "POST",
             data: $("#form").serialize(),
             success: function (result) {
-                alert(result.msg);
                 //关闭
                 $("#empModal").modal('hide');
+                alert(result.msg);
             }
         });
         location.reload();
