@@ -3,6 +3,8 @@
 #### 演示地址
 http://59.110.157.238:8087
 
+登录用户名：admin，密码：1
+
 #### 介绍
 
 Spring Boot + MyBatis + thymeleaf + MySQL + jQuery + ajax等实现轻便的图书借阅管理系统
@@ -25,7 +27,7 @@ Spring Boot + MyBatis + thymeleaf + MySQL + jQuery + ajax等实现轻便的图�
 
 1.  导入项目，刷新Maven依赖。
 2.  更改yml文件中数据库连接配置
-3.  导入数据库表结构与数据
+3.  导入数据库表结构与数据（SQL文件已上传至目录）
 
 #### 使用说明
 
