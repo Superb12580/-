@@ -1,5 +1,8 @@
 # 图书借阅管理系统
 
+#### 演示地址
+http://59.110.157.238:8087
+
 #### 介绍
 
 Spring Boot + MyBatis + thymeleaf + MySQL + jQuery + ajax等实现轻便的图书借阅管理系统
